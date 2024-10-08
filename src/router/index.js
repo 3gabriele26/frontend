@@ -4,7 +4,6 @@ import FormView from '../views/FormView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  mode: 'hash', 
   routes: [
     {
       path: '/',
