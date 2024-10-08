@@ -1,0 +1,58 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Orbitron", sans-serif;
+
+  background-image: url("../assets/cityBackground.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#app {
+  height: 100vh;
+}
+
+a{
+  text-decoration: none;
+  padding: 3px;
+  color: white;
+  cursor: pointer;
+}
+
+.gold_text {
+  color: #c2b590;
+}
+
+.white_text {
+  color: #ffffff;
+}
+
+.hover:hover {
+  text-decoration: underline;
+}
+
+input, textarea {
+  border-radius: 8px;
+  border-style: none;
+  box-shadow: 0px 0px 5px 2px rgba(96,89,68,0.55);
+
+  margin: 5px 5px;
+  padding: 5px;
+}
+
+::placeholder {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 600;
+  color: rgba(0,0,0,0.40);
+}
+
+
+
