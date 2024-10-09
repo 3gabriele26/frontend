@@ -91,6 +91,7 @@
         flex-direction: column;
 
         padding: 15px;
+        margin: 1.2rem auto;
         max-width: 31rem;
     }
 

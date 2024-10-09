@@ -7,13 +7,16 @@
 }
 
 body {
-  min-height: 100vh;
+  height: 100%;
+  width: 100%;
   font-family: "Orbitron", sans-serif;
 
   background-image: url("../assets/cityBackground.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  margin: 0; /* Elimina i margini */
+  padding: 0;
 
   padding-top: env(safe-area-inset-top);
   padding-bottom: env(safe-area-inset-bottom);
@@ -62,10 +65,14 @@ input::placeholder {
   line-height: 2;
 }
 
-/* Stili applicati se l'altezza è inferiore a 500px */
-@media (max-height: 515px) {
+@media only screen and (min-width: 767px) and (max-height: 650px){
   #app {
-    height: max-content;
+    height: fit-content;
   }
 }
 
+@media only screen and (max-width: 766px) and (max-height: 514px){
+  #app {
+    height: fit-content;
+  }
+}
