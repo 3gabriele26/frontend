@@ -101,10 +101,11 @@
     }
 
     /* Smartphone fino a 480px */
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 767px) {
         input {
-            height: 0.8rem;
-            font-size: 0.5rem;
+            height: 1.2rem;
+            font-size: 0.75rem;
+            border-radius: 0.4rem;
         }
 
         .form_container {
@@ -113,33 +114,12 @@
 
         ::placeholder {
             font-size: 0.4rem;
-            line-height: 2;
         }      
 
         .smaller_text {
             font-size: 0.5rem;
         }
-    }
-
-
-    /* Smartphone e piccoli tablet (481px - 767px) */
-    @media only screen and (min-width: 481px) and (max-width: 767px) {
-        input {
-            height: 1.2rem;
-            font-size: 0.75rem;
-        }
-
-        .form_container {
-            max-width: 26rem;
-        }
-
-        ::placeholder {
-            font-size: 0.5rem;
-        }
-
-        .smaller_text {
-            font-size: 0.75rem;
-        }
-    }   
+    }  
+    
 </style>
   

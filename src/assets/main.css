@@ -57,5 +57,10 @@ input::placeholder {
   line-height: 2;
 }
 
-
+/* Stili applicati se l'altezza è inferiore a 500px */
+@media (max-height: 615px) {
+  #app {
+    height: max-content;
+  }
+}
 
