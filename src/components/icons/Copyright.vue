@@ -7,6 +7,7 @@
 <style scoped>
     .copyright_icon{
         height: 15px;
+        margin-right: 5px;
     }
 </style>
 

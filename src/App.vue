@@ -1,12 +1,11 @@
 <script setup>
   import { RouterLink, RouterView } from 'vue-router'
-  import "./assets/button.css"
   import Footer from './components/Footer.vue';
 </script>
 
 <template>
   <div class="container_root">
-    <header>
+    <header class="logo_container">
       <RouterLink to="/"><img src="./assets/LOGO_ELGA.jpg" alt="ELGA s.r.l. LOGO" class="logo"></RouterLink>
     </header>
 
@@ -28,32 +27,28 @@
     flex-direction: column;
   }
 
+  .logo_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
   .logo {
     margin: 20px;
     border-radius: 25px;
     height: 100px;
   }
 
-  @media (min-width: 1024px) {
-    header {
-      display: flex;
-      place-items: center;
-      padding-right: calc(var(--section-gap) / 2);
+  /* Smartphone fino a 480px */
+  @media only screen and (max-width: 767px) {
+    .logo_container {
+      justify-content: center;
     }
 
-    header .wrapper {
-      display: flex;
-      place-items: flex-start;
-      flex-wrap: wrap;
-    }
-
-    nav {
-      text-align: left;
-      margin-left: -1rem;
-      font-size: 1rem;
-
-      padding: 1rem 0;
-      margin-top: 1rem;
+    .logo {
+      margin: 0.75rem;
+      border-radius: 0.8rem;
+      height: 4rem;
     }
   }
 </style>

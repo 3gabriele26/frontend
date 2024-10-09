@@ -1,0 +1,43 @@
+.container {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px 0px #050404;
+
+    margin: 0 auto;
+    max-width: 40rem;
+    padding:5rem;
+}
+
+.quote_container {
+    text-align: center;
+}
+
+.quote {
+    font-weight: 700;
+    color: #050404;
+}
+
+/* Smartphone fino a 480px */
+@media only screen and (max-width: 480px) {
+    .container {
+        max-width: 20rem;
+        padding: 1rem;
+    }
+
+    .quote{
+        font-size: 0.5rem;
+    }
+}
+
+
+/* Smartphone e piccoli tablet (481px - 767px) */
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    .container {
+        max-width: 30rem;
+        padding: 2.5rem;
+    }
+
+    .quote{
+        font-size: 0.75rem;
+    }
+}

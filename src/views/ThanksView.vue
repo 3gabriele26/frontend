@@ -7,12 +7,12 @@
 <template>
   <div class="container">
     <div class="quote_container">
-      <h3 class="quote">“Soltanto una cosa rende impossibile un sogno:<br>la paura di fallire”</h3>
+      <h3 class="quote">Grazie per averci contattati !</h3>
     </div>
 
-    <RouterLink to="/form" class="button_div">
+    <RouterLink to="/" class="button_div">
       <div class="button">
-        <h2 class="button_text">CONTATTACI</h2>
+        <h2 class="button_text">TORNA ALLA HOME</h2>
       </div>
     </RouterLink>
     

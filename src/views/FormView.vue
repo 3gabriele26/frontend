@@ -1,13 +1,13 @@
 <script setup>
     import {setCookie, getCookie} from "../javascipt/cookies"
-
-    const visibility = false
-
+    import { RouterLink } from 'vue-router'
+    import "./css/container.css"
+    
 </script>
 
 <template>
     <div class="form_view" @submit.prevent="submitForm">
-        <form class="form_container" id="questionario">
+        <form class="form_container container" id="questionario">
             <input type="text" placeholder="NOME" required v-model="formData.name">
             <input type="text" placeholder="COGNOME"  required v-model="formData.surname">
             <input type="email" placeholder="EMAIL" required v-model="formData.email">
@@ -17,10 +17,10 @@
 
             <div class="privacy_policy">
                 <input type="checkbox"  style="box-shadow: none;" required disabled id="privacy_policy_checkbox">
-                <h6><a style="color: #c2b590;" class="hover" @click="privacyPolicyViewed">Privacy Policy</a></h6>
+                <h6 class="smaller_text"><a style="color: #c2b590;" class="hover" @click="privacyPolicyViewed">Privacy Policy</a></h6>
             </div>
 
-            <button class="button" type="submit" form="questionario" value="INVIA">
+            <button class="button" type="submit" form="questionario" value="INVIA" >
                 <h2 class="button_text">INVIA</h2>
             </button>
         </form>
@@ -52,14 +52,17 @@
         methods: {
             async submitForm() {
                 try {
-                    const response = await axios.post('https://elga-af9efdb3b7ea.herokuapp.com/send-email', this.formData);
-                    alert('Email inviata con successo!');
+                    this.$router.replace('/thanks');
+                    //const response = await axios.post('http://127.0.0.1:5000/send-email', this.formData)
+                    const response = await axios.post('https://elga-af9efdb3b7ea.herokuapp.com/send-email', this.formData) //For debug 
+                    console.log(response)
+                    //alert('Email inviata con successo!');
                 } catch (error) {
                     console.error('Errore durante l\'invio dell\'email:', error);
                     alert('Errore durante l\'invio.');
                 }
             },
-            privacyPolicyViewed: function () {
+            privacyPolicyViewed: function() {
                 setCookie("Privacy Policy Read", true, 1)
                 document.querySelector("#privacy_policy_checkbox").disabled = false
             }
@@ -84,16 +87,11 @@
     }
 
     .form_container {
-        background: rgba(255, 255, 255, 0.6);
-        border-radius: 15px;
-        box-shadow: 0px 0px 5px 0px #050404;
-
         display: flex;
         flex-direction: column;
 
         padding: 15px;
-        max-width:500px ;
-        margin: auto;
+        max-width: 31rem;
     }
 
     .privacy_policy {
@@ -101,5 +99,47 @@
         flex-direction: row;
         align-items: center;
     }
+
+    /* Smartphone fino a 480px */
+    @media only screen and (max-width: 480px) {
+        input {
+            height: 0.8rem;
+            font-size: 0.5rem;
+        }
+
+        .form_container {
+            max-width: 20rem;
+        }
+
+        ::placeholder {
+            font-size: 0.4rem;
+            line-height: 2;
+        }      
+
+        .smaller_text {
+            font-size: 0.5rem;
+        }
+    }
+
+
+    /* Smartphone e piccoli tablet (481px - 767px) */
+    @media only screen and (min-width: 481px) and (max-width: 767px) {
+        input {
+            height: 1.2rem;
+            font-size: 0.75rem;
+        }
+
+        .form_container {
+            max-width: 26rem;
+        }
+
+        ::placeholder {
+            font-size: 0.5rem;
+        }
+
+        .smaller_text {
+            font-size: 0.75rem;
+        }
+    }   
 </style>
   

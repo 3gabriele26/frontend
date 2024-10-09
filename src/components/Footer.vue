@@ -8,7 +8,7 @@
 
 <template>
     <div class="footer_primary_container">
-        <div class="copyright_credits_container opacity">
+        <div class="copyright_credits_container opacity" style="cursor: pointer;">
             <Copyright></Copyright>
             <h6 class="copyright_credits">2024 - {{ copyright_year }}</h6>
         </div>
@@ -20,7 +20,7 @@
 
         <div class="software_credits_container opacity">
             <h6 class="white_text">Realizzato da:</h6>
-            <a href="" class="white_text hover"><h6>GSTGRL</h6></a>
+            <a href="https://linktr.ee/gabrielegiustozzi" class="white_text hover" target="_blank"><h6>GSTGRL</h6></a>
         </div>
     </div>
 </template>
@@ -75,6 +75,37 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+    }
+
+    /* Smartphone fino a 480px */
+    @media only screen and (max-width: 480px) {
+        .copyright_credits_container {
+            font-size: 0.5rem;
+        }
+
+        .company_container {
+            font-size: 0.5rem;
+        }
+
+        .software_credits_container {
+            font-size: 0.5rem;
+        }
+    }
+
+
+    /* Smartphone e piccoli tablet (481px - 767px) */
+    @media only screen and (min-width: 481px) and (max-width: 767px) {
+        .copyright_credits_container {
+            font-size: 0.75rem;
+        }
+
+        .company_container {
+            font-size: 0.75rem;
+        }
+
+        .software_credits_container {
+            font-size: 0.75rem;
+        }
     }
 </style>
 
