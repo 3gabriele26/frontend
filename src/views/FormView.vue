@@ -111,7 +111,6 @@
 
         .form_container {
             max-width: 20rem;
-            margin: 1.2rem auto;
         }
 
         ::placeholder {
