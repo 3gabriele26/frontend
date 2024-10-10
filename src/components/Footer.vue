@@ -20,7 +20,7 @@
 
         <div class="software_credits_container opacity">
             <h6 class="white_text">Realizzato da:</h6>
-            <a href="https://linktr.ee/gabrielegiustozzi" class="white_text hover" target="_blank"><h6>GSTGRL</h6></a>
+            <a href="https://linktr.ee/GSTGRL" class="white_text hover" target="_blank"><h6>GSTGRL</h6></a>
         </div>
     </div>
 </template>
