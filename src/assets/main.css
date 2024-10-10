@@ -6,15 +6,16 @@
   font-weight: normal;
 }
 
-html, body {
-  margin: 0;
-  height: 100%;
-}
-
 body {
   font-family: "Orbitron", sans-serif;
+}
 
-  background-image: url("../assets/cityBackground.jpg");
+#app {
+  height: 100vh;
+}
+
+.background_img {
+  background: url("../assets/cityBackground.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -24,13 +25,10 @@ body {
   bottom: 0;
 
   width: 100vw;
+  height: 100vh;
 
   margin: 0; /* Elimina i margini */
   padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
-}
-
-#app {
-  height: 100vh;
 }
 
 a{
@@ -58,8 +56,6 @@ input, textarea {
   border-radius: 8px;
   border-style: none;
   box-shadow: 0px 0px 5px 2px rgba(96,89,68,0.55);
-
-  margin: 5px 5px;
   padding: 5px;
 }
 
@@ -67,5 +63,4 @@ input::placeholder {
   font-family: "Orbitron", sans-serif;
   font-weight: 600;
   color: rgba(0,0,0,0.40);
-  line-height: 2;
 }

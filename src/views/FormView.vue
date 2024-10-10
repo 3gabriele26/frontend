@@ -71,7 +71,11 @@
 </script>
 
 
-<style>
+<style scoped>
+    .button {
+        margin: 0;    
+    }
+
     input {
         height: 28px;
     }
@@ -82,10 +86,6 @@
         max-height: 150px;
     }
 
-    .form_view {
-        margin: auto
-    }
-
     .form_container {
         display: flex;
         flex-direction: column;
@@ -93,6 +93,7 @@
         padding: 15px;
         margin: 1.2rem auto;
         max-width: 31rem;
+        gap: 10px;
     }
 
     .privacy_policy {
