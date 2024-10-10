@@ -6,22 +6,27 @@
   font-weight: normal;
 }
 
-body {
+html, body {
+  margin: 0;
   height: 100%;
-  width: 100%;
+}
+
+body {
   font-family: "Orbitron", sans-serif;
 
   background-image: url("../assets/cityBackground.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  margin: 0; /* Elimina i margini */
-  padding: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 
-  padding-top: env(safe-area-inset-top);
-  padding-bottom: env(safe-area-inset-bottom);
-  padding-left: env(safe-area-inset-left);
-  padding-right: env(safe-area-inset-right);
+  width: 100vw;
+
+  margin: 0; /* Elimina i margini */
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
 #app {

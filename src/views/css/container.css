@@ -3,7 +3,7 @@
     border-radius: 15px;
     box-shadow: 0px 0px 5px 0px #050404;
 
-    margin: 0 auto;
+    margin: 0px auto;
     max-width: 40rem;
     padding:5rem;
 }
@@ -22,10 +22,11 @@
     .container {
         max-width: 20rem;
         padding: 1rem;
+        margin: 0.4rem auto;
     }
 
     .quote{
-        font-size: 0.5rem;
+        font-size: 0.75rem;
     }
 }
 
@@ -35,10 +36,11 @@
     .container {
         max-width: 30rem;
         padding: 2.5rem;
+        margin: 0.75rem auto;
     }
 
     .quote{
-        font-size: 0.75rem;
+        font-size: 0.85rem;
     }
 }
 
