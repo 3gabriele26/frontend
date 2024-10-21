@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import FormView from '../views/FormView.vue'
-import ThanksView from '../views/ThanksView.vue'
+import Home from '@/views/Home.vue'
+import About from '@/views/About.vue'
+import Form from '@/views/Form.vue'
+import Thanks from '@/views/Thanks.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -9,19 +10,40 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: Home,
+      meta: {
+        title: "ELGA"
+      },
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: About,
+      meta: {
+        title: "Chi siamo"
+      },
     },
     {
       path: '/form',
       name: 'form',
-      component: FormView
+      component: Form,
+      meta: {
+        title: "Contattaci"
+      },
     },
     {
       path: '/thanks',
       name: 'thanks',
-      component: ThanksView
+      component: Thanks,
+      meta: {
+        title: "Grazie!"
+      },
     }
   ]
 })
+
+router.afterEach((to) => {
+  document.title = to.meta.title || 'Default Title'; // Cambia il titolo della scheda
+});
 
 export default router

@@ -1,111 +1,69 @@
 <script setup>
-  import { RouterLink } from 'vue-router'
-  import Copyright from './icons/Copyright.vue';
+    import { RouterLink } from 'vue-router'
 
-  const copyright_year = new Date().getFullYear()
+    const copyright_year = new Date().getFullYear()
 </script>
 
-
 <template>
-    <div class="footer_primary_container">
-        <div class="copyright_credits_container opacity" style="cursor: pointer;">
-            <Copyright></Copyright>
-            <h6 class="copyright_credits">2024 - {{ copyright_year }}</h6>
+    <div class="container footer">
+        <div class="footer-link">
+            <img src="../assets/copyright-regular.svg" alt="" height="20" width="20">
+            <span class="copyright-year">{{ copyright_year }}</span>
         </div>
 
-        <div class="company_container">
-            <RouterLink to="/"><h5 class="gold_text hover">ELGA s.r.l.</h5></RouterLink>
-            <h6 class="gold_text"> - P.iva 02139780437</h6>
+        <div class="footer-link">
+            <RouterLink to="/" class="link" style="color: #C2B590;"><h5>ELGA s.r.l.</h5></RouterLink>
+            <span><h6 style="color: #C2B590;">- P.iva 02139780437</h6></span>
         </div>
 
-        <div class="software_credits_container opacity">
-            <h6 class="white_text">Realizzato da:</h6>
-            <a href="https://linktr.ee/GSTGRL" class="white_text hover" target="_blank"><h6>GSTGRL</h6></a>
+        <div class="footer-link">
+            <a href="https://linktr.ee/GSTGRL" target="_blank" rel="noopener noreferrer" class="link" style="color: #fff;">GSTGRL</a>
         </div>
     </div>
 </template>
 
-
 <style scoped>
-
-    .opacity {
-        opacity: 0.5;
+    .footer {
+        background-color: #050404;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem;   
+        border-radius: 1rem 1rem 0 0; 
     }
-    .opacity:hover {
+
+    .footer-link {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        opacity: 0.5;
+        cursor: pointer;
+    }
+    .footer-link:hover {
         opacity: 1;
     }
 
-    .footer_primary_container {
-        background-color: #050404;
-        border-radius: 10px 10px 0 0;
-
-        height: 30px;
-
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
+    .link {
+        text-decoration: none;
+    }
+    .link:hover {
+        text-decoration: underline;
     }
 
-    .copyright_credits_container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-
-        color: white;
-        text-align: center;
-        
-        margin-left: 10px;
+    .copyright-year {
+        margin-left: 0.5rem;
+        color: #C2B590;
     }
 
-    .copyright_credits {
-        font-weight: 400;
-        text-align: center;
+    a, h5, h6, span {
+        font-size: 0.7rem;
+        margin: 0;
     }
 
-    .company_container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
+    @media (min-width: 576px) {
 
-    .software_credits_container {
-        margin-right: 10px;
-
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-
-    /* Smartphone fino a 480px */
-    @media only screen and (max-width: 480px) {
-        .copyright_credits_container {
-            font-size: 0.5rem;
-        }
-
-        .company_container {
-            font-size: 0.5rem;
-        }
-
-        .software_credits_container {
-            font-size: 0.5rem;
-        }
-    }
-
-
-    /* Smartphone e piccoli tablet (481px - 767px) */
-    @media only screen and (min-width: 481px) and (max-width: 767px) {
-        .copyright_credits_container {
-            font-size: 0.75rem;
-        }
-
-        .company_container {
-            font-size: 0.75rem;
-        }
-
-        .software_credits_container {
-            font-size: 0.75rem;
+        a, h5, h6, span {
+            font-size: 1rem;
         }
     }
 </style>
-

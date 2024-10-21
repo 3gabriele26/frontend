@@ -1,66 +1,43 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+@import './base.css';
+
+html, body, #app {
   margin: 0;
-  font-weight: normal;
+  padding: 0;
+  height: 100%;
+  width: 100%; /* Imposta la larghezza a 100% del contenitore */
+  box-sizing: border-box; /* Assicura che padding e bordi siano inclusi nelle dimensioni */
+  overflow-x: hidden; /* Evita eventuali scroll orizzontali */
 }
 
 body {
-  font-family: "Orbitron", sans-serif;
+  background-image: url("./IMG_2477.jpeg");
+  background-position: center;
+  background-size: cover;
+  
+  font-family: arsenica-variable, sans-serif !important;
+
 }
 
 #app {
-  height: 100vh;
+  margin: 0 auto;
+  padding: 2rem 2rem 0 2rem;
+  font-weight: normal;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.background_img {
-  background: url("../assets/cityBackground.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  width: 100vw;
-  height: 100vh;
-
-  margin: 0; /* Elimina i margini */
-  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
-}
-
-a{
-  text-decoration: none;
-  padding: 3px;
-  color: white;
+a {
   cursor: pointer;
 }
 
-.gold_text {
-  color: #c2b590;
+.btn {
+  width: 100%;
+  background-color: #c2b590  !important;
+  margin-top: 2rem;
 }
-
-.white_text {
-  color: #ffffff;
-}
-
-.hover:hover {
-  text-decoration: underline;
-}
-
-input, textarea {
-  font-family: "Orbitron", sans-serif;
-  font-weight: 400;
-  border-radius: 8px;
-  border-style: none;
-  box-shadow: 0px 0px 5px 2px rgba(96,89,68,0.55);
-  padding: 5px;
-}
-
-input::placeholder {
-  font-family: "Orbitron", sans-serif;
-  font-weight: 600;
-  color: rgba(0,0,0,0.40);
+.btn:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Aggiungi un'ombra */
+  border-color: #999 !important; /* Cambia il colore del bordo */
 }
