@@ -101,8 +101,8 @@
                 try {
                     console.log(this.formData)
                     this.$router.replace('/thanks');
-                    const response = await axios.post('http://127.0.0.1:5000/send-email', this.formData)
-                    //const response = await axios.post('https://elga-af9efdb3b7ea.herokuapp.com/send-email', this.formData) //For debug 
+                    //const response = await axios.post('http://127.0.0.1:5000/send-email', this.formData)
+                    const response = await axios.post('https://elga-af9efdb3b7ea.herokuapp.com/send-email', this.formData) //For debug 
                     console.log(response)
                     //alert('Email inviata con successo!');
                 } catch (error) {
